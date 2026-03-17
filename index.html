@@ -1,36 +1,105 @@
-function showAlert(placeName) {
-    alert("คุณกำลังสนใจเดินทางไป: " + placeName + "\nข้อมูลเพิ่มเติมกำลังเตรียมพร้อมในเวอร์ชัน Digital Twin เร็วๆ นี้!");
-}
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khao Yai Digital Twin - แนะนำที่เที่ยวเขาใหญ่</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
 
-function handleForm(event) {
-    event.preventDefault(); // ป้องกันหน้าเว็บรีโหลด
-    
-    alert("ขอบคุณที่ติดต่อเรา! ทีมงาน Khao Yai Digital Twin จะตอบกลับท่านผ่านทางอีเมลโดยเร็วที่สุด");
-    event.target.reset(); // ล้างข้อมูลในฟอร์ม
-}
+    <nav class="navbar">
+        <div class="logo">KhaoYai Twin</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">ข้อมูล</a></li>
+            <li><a href="#services">บริการ</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="burger" onclick="toggleMenu()">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
 
-function toggleMenu() {
-    const nav = document.getElementById('navLinks');
-    if (nav.style.display === 'flex') {
-        nav.style.display = 'none';
-    } else {
-        nav.style.display = 'flex';
-        nav.style.flexDirection = 'column';
-        nav.style.position = 'absolute';
-        nav.style.top = '70px';
-        nav.style.left = '0';
-        nav.style.width = '100%';
-        nav.style.background = '#2d5a27';
-    }
-}
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>สำรวจ "เขาใหญ่" ในรูปแบบดิจิทัล</h1>
+            <p>สัมผัสประสบการณ์การท่องเที่ยวเสมือนจริงและข้อมูลที่ครบถ้วน</p>
+            <a href="#about" class="btn">เริ่มต้นสำรวจ</a>
+        </div>
+    </header>
 
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.padding = '10px 10%';
-        navbar.style.background = 'rgba(45, 90, 39, 0.95)';
-    } else {
-        navbar.style.padding = '20px 10%';
-        navbar.style.background = '#2d5a27';
-    }
-});
+    <section id="about" class="section">
+        <h2 class="section-title">สถานที่ท่องเที่ยวแนะนำ</h2>
+        <div class="places-grid">
+            <div class="place-card">
+                <img src="https://images.unsplash.com/photo-1588392382834-a8749e759600?auto=format&fit=crop&w=500&q=60" alt="น้ำผุดธรรมชาติ">
+                <h3>1. น้ำผุดธรรมชาติ (บ้านท่าช้าง)</h3>
+                <p>ตาน้ำที่มีน้ำไหลตลอดปี น้ำใสสีฟ้าครามสวยงาม</p>
+                <button class="btn-small" onclick="showAlert('น้ำผุดธรรมชาติ')">ดูเพิ่มเติม</button>
+            </div>
+            <div class="place-card">
+                <img src="https://images.unsplash.com/photo-1533626904905-cc52fd99285e?auto=format&fit=crop&w=500&q=60" alt="โบนานซ่า">
+                <h3>2. โบนานซ่า เขาใหญ่</h3>
+                <p>แหล่งรวมกิจกรรมแอดเวนเจอร์และสวนสัตว์ Bonanza Exotic Park</p>
+                <button class="btn-small" onclick="showAlert('โบนานซ่า')">ดูเพิ่มเติม</button>
+            </div>
+            <div class="place-card">
+                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=500&q=60" alt="น้ำตกเหวนรก">
+                <h3>3. น้ำตกเหวนรก</h3>
+                <p>น้ำตกที่ใหญ่และสูงที่สุดในอุทยานแห่งชาติเขาใหญ่</p>
+                <button class="btn-small" onclick="showAlert('น้ำตกเหวนรก')">ดูเพิ่มเติม</button>
+            </div>
+            <div class="place-card">
+                <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=500&q=60" alt="Primo Piazza">
+                <h3>4. Primo Piazza</h3>
+                <p>สถาปัตยกรรมสไตล์อิตาลี พร้อมกิจกรรมให้อาหารสัตว์</p>
+                <button class="btn-small" onclick="showAlert('Primo Piazza')">ดูเพิ่มเติม</button>
+            </div>
+            <div class="place-card">
+                <img src="https://images.unsplash.com/photo-1495107336281-199515228db1?auto=format&fit=crop&w=500&q=60" alt="Hokkaido Flower Park">
+                <h3>5. Hokkaido Flower Park</h3>
+                <p>ทุ่งดอกไม้หลากสีสัน ท่ามกลางบรรยากาศแบบญี่ปุ่น</p>
+                <button class="btn-small" onclick="showAlert('Hokkaido Flower Park')">ดูเพิ่มเติม</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section bg-light">
+        <h2 class="section-title">บริการของเรา</h2>
+        <div class="services-container">
+            <div class="service-item">
+                <i class="icon">🗺️</i>
+                <h3>แผนที่ดิจิทัล</h3>
+                <p>ข้อมูลตำแหน่งพิกัดแม่นยำสำหรับนักท่องเที่ยว</p>
+            </div>
+            <div class="service-item">
+                <i class="icon">🚗</i>
+                <h3>แนะนำการเดินทาง</h3>
+                <p>วางแผนการเดินทางจากกรุงเทพฯ และพื้นที่ใกล้เคียง</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2 class="section-title">ติดต่อสอบถาม</h2>
+        <div class="contact-container">
+            <form id="contactForm" onsubmit="handleForm(event)">
+                <input type="text" placeholder="ชื่อของคุณ" required>
+                <input type="email" placeholder="อีเมลของคุณ" required>
+                <textarea placeholder="ข้อความถึงเรา" rows="5"></textarea>
+                <button type="submit" class="btn">ส่งข้อความ</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Khao Yai Digital Twin Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
