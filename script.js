@@ -1,0 +1,35 @@
+function showAlert(placeName) {
+    alert("คุณกำลังสนใจเดินทางไป: " + placeName + "\nข้อมูลเพิ่มเติมกำลังเตรียมพร้อมในเวอร์ชัน Digital Twin เร็วๆ นี้!");
+}
+function handleForm(event) {
+    event.preventDefault(); 
+    
+    alert("ขอบคุณที่ติดต่อเรา! ทีมงาน Khao Yai Digital Twin จะตอบกลับท่านผ่านทางอีเมลโดยเร็วที่สุด");
+    event.target.reset(); // ล้างข้อมูลในฟอร์ม
+}
+
+function toggleMenu() {
+    const nav = document.getElementById('navLinks');
+    if (nav.style.display === 'flex') {
+        nav.style.display = 'none';
+    } else {
+        nav.style.display = 'flex';
+        nav.style.flexDirection = 'column';
+        nav.style.position = 'absolute';
+        nav.style.top = '70px';
+        nav.style.left = '0';
+        nav.style.width = '100%';
+        nav.style.background = '#2d5a27';
+    }
+}
+
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.style.padding = '10px 10%';
+        navbar.style.background = 'rgba(45, 90, 39, 0.95)';
+    } else {
+        navbar.style.padding = '20px 10%';
+        navbar.style.background = '#2d5a27';
+    }
+});
