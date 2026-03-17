@@ -1,18 +1,14 @@
-/ ฟังก์ชันสำหรับแสดง Alert เมื่อคลิกดูข้อมูลสถานที่
 function showAlert(placeName) {
     alert("คุณกำลังสนใจเดินทางไป: " + placeName + "\nข้อมูลเพิ่มเติมกำลังเตรียมพร้อมในเวอร์ชัน Digital Twin เร็วๆ นี้!");
 }
 
-// ฟังก์ชันจัดการการส่งฟอร์ม (Form Submission)
 function handleForm(event) {
     event.preventDefault(); // ป้องกันหน้าเว็บรีโหลด
     
-    // ดึงค่าจากฟอร์ม (ตัวอย่าง)
     alert("ขอบคุณที่ติดต่อเรา! ทีมงาน Khao Yai Digital Twin จะตอบกลับท่านผ่านทางอีเมลโดยเร็วที่สุด");
     event.target.reset(); // ล้างข้อมูลในฟอร์ม
 }
 
-// ฟังก์ชันเปิด/ปิดเมนูบนมือถือ (พื้นฐาน)
 function toggleMenu() {
     const nav = document.getElementById('navLinks');
     if (nav.style.display === 'flex') {
@@ -28,7 +24,6 @@ function toggleMenu() {
     }
 }
 
-// ระบบ Scroll Reveal เล็กน้อย
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
