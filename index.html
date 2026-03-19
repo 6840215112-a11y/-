@@ -1,81 +1,83 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-<meta charset="UTF-8">
-<title>ที่นี่เขาใหญ่</title>
-<style>
-
-body{
-    font-family: Arial;
-    margin:0;
-    background:#f5f5f5;
-}
-
-header{
-background:#000;
-    color:white;
-    padding:20px;
-    text-align:center;
-}
-
-nav{
-    background:#444;
-    padding:10px;
-    text-align:center;
-}
-
-nav a{
-    color:white;
-    margin:10px;
-    text-decoration:none;
-}
-
-section{
-    padding:40px;
-    text-align:center;
-}
-
-img{
-    width:80%;
-    border-radius:10px;
-}
-
-footer{
-    background:#000;
-    color:white;
-    text-align:center;
-    padding:10px;
-}
-
-</style>
+  <meta charset="UTF-8">
+  <title>Khaoyai Digital Guide</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-<h1>KHOA YAI</h1>
-<p>เขาใหญ่</p>
-</header>
-
+<!-- เมนู -->
 <nav>
-<a href="#">หน้าแรก</a>
-<a href="#">เกี่ยวกับ</a>
-<a href="#">ติดต่อ</a>
+  <h2>KHAOYAI</h2>
+  <ul>
+    <li><a href="#home">หน้าแรก</a></li>
+    <li><a href="#places">สถานที่</a></li>
+    <li><a href="#about">เกี่ยวกับ</a></li>
+  </ul>
 </nav>
 
-<section>
+<!-- Hero -->
+<section id="home" class="hero">
+  <h1>เที่ยวเขาใหญ่</h1>
+  <p>สัมผัสธรรมชาติ จุดเช็คอินยอดฮิต</p>
+</section>
 
-<h2>ที่มาของโครงการ</h2>
+<!-- สถานที่ -->
+<section id="places" class="places">
 
-<p>
-อุทยานแห่งชาติเขาใหญ่ เกิดขึ้นจากแนวคิดในการอนุรักษ์ทรัพยากรธรรมชาติและสัตว์ป่าของประเทศไทย โดยในอดีตพื้นที่บริเวณนี้เป็นป่าดงดิบขนาดใหญ่ที่อุดมสมบูรณ์ มีสัตว์ป่าและพืชพันธุ์จำนวนมาก แต่เริ่มถูกบุกรุกและล่าสัตว์อย่างต่อเนื่อง
-</p>
+  <h2>สถานที่แนะนำ</h2>
+
+  <div class="grid">
+
+    <div class="card" onclick="showDetail(1)">
+      <img src="ที่เที่ยว1.jpg">
+      <h3>เขายายเที่ยง</h3>
+    </div>
+
+    <div class="card" onclick="showDetail(2)">
+      <img src="ที่เที่ยว2.jpg">
+      <h3>น้ำผุด</h3>
+    </div>
+
+    <div class="card" onclick="showDetail(3)">
+      <img src="ที่เที่ยว3.jpg">
+      <h3>น้ำตกเหวนรก</h3>
+    </div>
+
+    <div class="card" onclick="showDetail(4)">
+      <img src="ที่เที่ยว4.jpg">
+      <h3>Primo Piazza</h3>
+    </div>
+
+    <div class="card" onclick="showDetail(5)">
+      <img src="ที่เที่ยว5.jpg">
+      <h3>Hokkaido Flower Park</h3>
+    </div>
+
+  </div>
 
 </section>
 
+<!-- popup -->
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <span onclick="closePopup()">✖</span>
+    <h2 id="title"></h2>
+    <p id="desc"></p>
+  </div>
+</div>
+
+<!-- เกี่ยวกับ -->
+<section id="about" class="about">
+  <h2>เกี่ยวกับ</h2>
+  <p>เว็บไซต์นี้จัดทำขึ้นเพื่อแนะนำสถานที่ท่องเที่ยวในเขาใหญ่</p>
+</section>
+
 <footer>
-<p>© 2026 TEE NEE KHOA YAI </p>
+  <p>© 2026 Khaoyai Travel</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
