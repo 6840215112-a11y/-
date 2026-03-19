@@ -1,88 +1,87 @@
 <!DOCTYPE html>
 <html lang="th">
-</head>
+<head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Khao Yai</title>
- <style>
-    body {
+
+  <style>
+    /* reset ช่องว่างทั้งหมด */
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: Arial, sans-serif;
     }
 
-    /* Header */
-    .top-bar {
-      background: black;
-      color: white;
-      text-align: center;
-      padding: 15px;
-    }
-
-    .top-bar small {
+    img {
       display: block;
-      color: #ccc;
+      width: 100%;
     }
 
-    /* Hero Section */
+    /* Hero */
     .hero {
-      background: url(ปก.jpg) no-repeat center center/cover;
       height: 300px;
+      background-image: url("hero.jpg"); /* รูปช้าง */
+      background-size: cover;
+      background-position: center;
       display: flex;
-      justify-content: center;
       align-items: center;
-      color: white;
-      text-align: center;
-      position: relative;
+      justify-content: center;
     }
 
     .hero h1 {
-      font-size: 50px;
-      margin: 0;
-    }
-
-    .hero p {
-      font-size: 24px;
-      margin: 5px 0 0;
+      color: white;
+      font-size: 48px;
+      letter-spacing: 3px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
     }
 
     /* Navbar */
     .navbar {
-      background: #555;
-      display: flex;
-      justify-content: center;
+      background-color: #777;
+      text-align: center;
+      padding: 12px 0;
     }
 
     .navbar a {
       color: white;
-      padding: 15px 25px;
       text-decoration: none;
-      font-size: 18px;
+      margin: 0 15px;
+      font-size: 16px;
     }
 
     .navbar a:hover {
-      background: #333;
+      text-decoration: underline;
     }
 
     /* Content */
-    .content {
-      padding: 40px;
+    .content img {
+      width: 100%;
+      height: auto;
     }
 
-    .content h2 {
-      font-size: 36px;
+    .text {
+      padding: 20px;
+    }
+
+    .text h2 {
+      margin-bottom: 10px;
+    }
+
+    .text p {
+      line-height: 1.6;
     }
   </style>
 </head>
- <!-- Hero -->
-  <div class="hero">
-    <div>
-      <h1>KHAO YAI</h1>
-    </div>
-  </div>
+
 <body>
 
-  <!-- Header -->
-  <div class="top-bar">
+  <!-- Hero -->
+  <div class="hero">
+    <h1>KHAO YAI</h1>
   </div>
 
   <!-- Navbar -->
@@ -95,14 +94,16 @@
 
   <!-- Content -->
   <div class="content">
-    <img src="khao yai.jpg" alt="รูปเขาใหญ่" width="2000">
-</div>
-    <h2>ที่มาของโครงการ</h2>
-    <p>
-      เว็บไซต์นี้จัดทำขึ้นเพื่อแนะนำสถานที่ท่องเที่ยวในเขาใหญ่
-      โดยรวบรวมข้อมูลที่สำคัญเพื่ออำนวยความสะดวกแก่นักท่องเที่ยว
-      และช่วยส่งเสริมการท่องเที่ยวในพื้นที่
-    </p>
+    <img src="khao-yai.jpg" alt="เขาใหญ่">
+
+    <div class="text">
+      <h2>ที่มาของโครงการ</h2>
+      <p>
+        เว็บไซต์นี้จัดทำขึ้นเพื่อนำเสนอแหล่งท่องเที่ยวในเขาใหญ่
+        โดยรวบรวมข้อมูลที่สำคัญเพื่ออำนวยความสะดวกแก่นักท่องเที่ยว
+        และช่วยส่งเสริมการท่องเที่ยวในพื้นที่
+      </p>
+    </div>
   </div>
 
 </body>
