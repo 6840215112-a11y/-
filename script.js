@@ -1,35 +1,54 @@
-function showAlert(placeName) {
-    alert("คุณกำลังสนใจเดินทางไป: " + placeName + "\nข้อมูลเพิ่มเติมกำลังเตรียมพร้อมในเวอร์ชัน Digital Twin เร็วๆ นี้!");
-}
-function handleForm(event) {
-    event.preventDefault(); 
-    
-    alert("ขอบคุณที่ติดต่อเรา! ทีมงาน Khao Yai Digital Twin จะตอบกลับท่านผ่านทางอีเมลโดยเร็วที่สุด");
-    event.target.reset(); // ล้างข้อมูลในฟอร์ม
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #f5f5f5;
 }
 
-function toggleMenu() {
-    const nav = document.getElementById('navLinks');
-    if (nav.style.display === 'flex') {
-        nav.style.display = 'none';
-    } else {
-        nav.style.display = 'flex';
-        nav.style.flexDirection = 'column';
-        nav.style.position = 'absolute';
-        nav.style.top = '70px';
-        nav.style.left = '0';
-        nav.style.width = '100%';
-        nav.style.background = '#2d5a27';
-    }
+header {
+    background: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
 
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.padding = '10px 10%';
-        navbar.style.background = 'rgba(45, 90, 39, 0.95)';
-    } else {
-        navbar.style.padding = '20px 10%';
-        navbar.style.background = '#2d5a27';
-    }
-});
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    width: 250px;
+    margin: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card h2 {
+    margin: 10px;
+}
+
+.card p {
+    margin: 10px;
+    color: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #2e7d32;
+    color: white;
