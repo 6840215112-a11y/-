@@ -2,39 +2,112 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
-  <title>KHAO YAI</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khao Yai</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Header */
+    .top-bar {
+      background: black;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .top-bar small {
+      display: block;
+      color: #ccc;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url(ปก.jpg) no-repeat center center/cover;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-size: 50px;
+      margin: 0;
+    }
+
+    .hero p {
+      font-size: 24px;
+      margin: 5px 0 0;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: #555;
+      display: flex;
+      justify-content: center;
+    }
+
+    .navbar a {
+      color: white;
+      padding: 15px 25px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .navbar a:hover {
+      background: #333;
+    }
+
+    /* Content */
+    .content {
+      padding: 40px;
+    }
+
+    .content h2 {
+      font-size: 36px;
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- header ด้านบน -->
-<header class="top-header">
-  <h2>KHAO YAI</h2>
-  <p>https://6840215112-a11y.github.io</p>
-</header>
-
-<!-- hero image -->
-<section class="hero">
-  <div class="overlay">
-    <h1>KHAO YAI</h1>
-    <p>เขาใหญ่</p>
+  <!-- Header -->
+  <div class="top-bar">
+    <h2>KHAO YAI</h2>
+    <small>https://yourwebsite.github.io</small>
   </div>
-</section>
 
-<!-- เมนู -->
-<nav>
-  <ul>
-    <li><a href="#">หน้าแรก</a></li>
-    <li><a href="#">เกี่ยวกับ</a></li>
-    <li><a href="#">รูป</a></li>
-    <li><a href="#">ติดต่อ</a></li>
-  </ul>
-</nav>
+  <!-- Hero -->
+  <div class="hero">
+    <div>
+      <h1>KHAO YAI</h1>
+      <p>เขาใหญ่</p>
+    </div>
+  </div>
 
-<!-- content -->
-<section class="content">
-  <h1>ที่มาของโครงการ</h1>
-</section>
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="#">หน้าแรก</a>
+    <a href="#">เกี่ยวกับ</a>
+    <a href="#">รูป</a>
+    <a href="#">ติดต่อ</a>
+  </div>
+
+  <!-- Content -->
+  <div class="content">
+    <h2>ที่มาของโครงการ</h2>
+    <p>
+      เว็บไซต์นี้จัดทำขึ้นเพื่อแนะนำสถานที่ท่องเที่ยวในเขาใหญ่
+      โดยรวบรวมข้อมูลที่สำคัญเพื่ออำนวยความสะดวกแก่นักท่องเที่ยว
+      และช่วยส่งเสริมการท่องเที่ยวในพื้นที่
+    </p>
+  </div>
 
 </body>
 </html>
