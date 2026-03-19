@@ -1,1 +1,33 @@
 alert("ยินดีต้อนรับสู่เว็บไซต์เที่ยวเขาใหญ่ 🌿");
+.hero {
+  height: 300px;
+  background-image: url("bg.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h1 {
+  color: white;
+  font-size: 64px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+.navbar {
+  background-color: #777;
+  text-align: center;
+  padding: 12px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 20px;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
